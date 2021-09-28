@@ -1,4 +1,8 @@
 /**
+ * 由于链表插入删除效率极高，达到O(1)。对于不需要搜索但变动频繁且无法预知数量上限的数据的情况的时候，都可以使用链表
+ */
+
+/**
  * 链表
  */
 function LinkedList() {
@@ -314,20 +318,3 @@ function DoublyLinkedList() {
 		return this.length
 	}
 }
-
-let a = new DoublyLinkedList()
-a.append('swt')
-a.append('mff')
-console.log(a.forwardString())
-console.log(a.backwardString())
-a.insert(0,'cyw')
-console.log(a.toString())
-console.log(a.get(0))
-console.log(a.get(2))
-console.log(a.indexOf('mff'))
-console.log(a.update(2, '巢怡雯'))
-console.log(a.toString())
-console.log(a.removeAt(2))
-console.log(a.remove('swt'))
-console.log(a.isEmpty())
-console.log(a.size())

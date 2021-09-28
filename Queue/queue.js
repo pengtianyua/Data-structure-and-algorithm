@@ -1,5 +1,5 @@
 /**
- * 基于数组实现队列
+ * 队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作
  */
 function Queue() {
 	this.items = []
@@ -38,7 +38,7 @@ function Queue() {
  * 击鼓传花
  * @param nameList 参与人员列表
  * @param num 多少次为一轮
- * @returns { losers: [], winner: string }
+ * @returns {{winner: *, losers: *[]}}
  */
 function passGame(nameList, num) {
 	//实例化队列
@@ -127,9 +127,3 @@ function PriorityQueue() {
 		this.items = []
 	}
 }
-
-let a = new PriorityQueue()
-a.enqueue('swt',10)
-a.enqueue('mff',100)
-a.enqueue('pty',50)
-console.log(a.toString())

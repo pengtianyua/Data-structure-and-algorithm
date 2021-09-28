@@ -1,6 +1,5 @@
 /**
- * 实现栈数据结构
- * @constructor
+ * 栈（stack）又名堆栈，它是一种运算受限的线性表，限定仅在表尾进行插入和删除操作的线性表
  */
 function Stack() {
 	//数组模拟栈
@@ -39,16 +38,16 @@ function Stack() {
 /**
  * 将十进制转成二进制
  * @param decNumber 十进制数字
- * @return binString 二进制数字
+ * @returns {string} 二进制数字
  */
 function dec2bin(decNumber) {
 	let stack = new Stack()
-	while(decNumber > 0) {
+	while (decNumber > 0) {
 		stack.push(decNumber % 2)
 		decNumber = Math.floor(decNumber / 2)
 	}
 	let binString = ''
-	while(!stack.isEmpty()) {
+	while (!stack.isEmpty()) {
 		binString += stack.pop()
 	}
 	return binString
